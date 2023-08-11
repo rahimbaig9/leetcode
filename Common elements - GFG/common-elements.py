@@ -3,25 +3,16 @@
 class Solution:
     def commonElements (self,A, B, C, n1, n2, n3):
         # your code here
-         A = set(A)
-         B = set(B)
-         C = set(C)
-        
-        # Find the common elements between A and B
-         common_AB = A.intersection(B)
-        
-        # Find the common elements between common_AB and C
-         common_elements = common_AB.intersection(C)
-        
-        # Convert the set to a sorted list
-         result = sorted(list(common_elements))
-        
-         return result
-
-
-
-
-
+        A=set(A)
+        B=set(B)
+        C=set(C)
+        k=set()
+        l=set()
+        k=B.intersection(A)
+        l=k.intersection(C)
+        l=list(l)
+        l.sort()
+        return l
 
 
 #{ 
